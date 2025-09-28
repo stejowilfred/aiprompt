@@ -1,0 +1,829 @@
+@font-face {
+	font-family: 'negoicons';
+
+	font-weight: normal;
+
+	font-style: normal;
+
+	src: url('../fonts/negofonts/negoicons.eot');
+
+	src: url('../fonts/negofonts/negoicons.eot') format('embedded-opentype'), url('../fonts/negofonts/negoicons.woff') format('woff'), url('../fonts/negofonts/negoicons.ttf') format('truetype'), url('../fonts/negofonts/negoicons.svg') format('svg');
+  }
+
+  
+.ng {
+
+	font-family: 'negoicons';
+
+	font-weight: normal;
+
+	font-style: normal;
+
+	font-variant: normal;
+
+	line-height: inherit;
+
+	display: inline-block;
+
+	text-transform: none;
+
+	speak: none;
+
+	-webkit-font-smoothing: antialiased;
+
+	-moz-osx-font-smoothing: grayscale;
+
+}
+
+
+.ng-ul {
+
+	margin-left: 2em;
+
+	padding-left: 0;
+
+	list-style: none;
+
+}
+
+.ng-ul > li {
+
+	position: relative;
+
+}
+
+.ng-ul .ng {
+
+	font-size: inherit;
+
+	line-height: inherit;
+
+	position: absolute;
+
+	left: -2em;
+
+	width: 2em;
+
+	text-align: center;
+
+}
+
+@-webkit-keyframes spin {
+
+	0% {
+
+		-webkit-transform: rotate(0);
+
+		transform: rotate(0);
+
+	}
+
+	100% {
+
+		-webkit-transform: rotate(359deg);
+
+		transform: rotate(359deg);
+
+	}
+
+}
+
+@keyframes spin {
+
+	0% {
+
+		-webkit-transform: rotate(0);
+
+		transform: rotate(0);
+
+	}
+
+	100% {
+
+		-webkit-transform: rotate(359deg);
+
+		transform: rotate(359deg);
+
+	}
+
+}
+
+@-webkit-keyframes burst {
+
+	0% {
+
+		-webkit-transform: scale(1);
+
+		transform: scale(1);
+
+		opacity: 1;
+
+	}
+
+	90% {
+
+		-webkit-transform: scale(1.5);
+
+		transform: scale(1.5);
+
+		opacity: 0;
+
+	}
+
+}
+
+@keyframes burst {
+
+	0% {
+
+		-webkit-transform: scale(1);
+
+		transform: scale(1);
+
+		opacity: 1;
+
+	}
+
+	90% {
+
+		-webkit-transform: scale(1.5);
+
+		transform: scale(1.5);
+
+		opacity: 0;
+
+	}
+
+}
+
+@-webkit-keyframes flashing {
+
+	0% {
+
+		opacity: 1;
+
+	}
+
+	45% {
+
+		opacity: 0;
+
+	}
+
+	90% {
+
+		opacity: 1;
+
+	}
+
+}
+
+@keyframes flashing {
+
+	0% {
+
+		opacity: 1;
+
+	}
+
+	45% {
+
+		opacity: 0;
+
+	}
+
+	90% {
+
+		opacity: 1;
+
+	}
+
+}
+
+@-webkit-keyframes fade-left {
+
+	0% {
+
+		-webkit-transform: translateX(0);
+
+		transform: translateX(0);
+
+		opacity: 1;
+
+	}
+
+	75% {
+
+		-webkit-transform: translateX(-20px);
+
+		transform: translateX(-20px);
+
+		opacity: 0;
+
+	}
+
+}
+
+@keyframes fade-left {
+
+	0% {
+
+		-webkit-transform: translateX(0);
+
+		transform: translateX(0);
+
+		opacity: 1;
+
+	}
+
+	75% {
+
+		-webkit-transform: translateX(-20px);
+
+		transform: translateX(-20px);
+
+		opacity: 0;
+
+	}
+
+}
+
+@-webkit-keyframes fade-right {
+
+	0% {
+
+		-webkit-transform: translateX(0);
+
+		transform: translateX(0);
+
+		opacity: 1;
+
+	}
+
+	75% {
+
+		-webkit-transform: translateX(20px);
+
+		transform: translateX(20px);
+
+		opacity: 0;
+
+	}
+
+}
+
+@keyframes fade-right {
+
+	0% {
+
+		-webkit-transform: translateX(0);
+
+		transform: translateX(0);
+
+		opacity: 1;
+
+	}
+
+	75% {
+
+		-webkit-transform: translateX(20px);
+
+		transform: translateX(20px);
+
+		opacity: 0;
+
+	}
+
+}
+
+@-webkit-keyframes fade-up {
+
+	0% {
+
+		-webkit-transform: translateY(0);
+
+		transform: translateY(0);
+
+		opacity: 1;
+
+	}
+
+	75% {
+
+		-webkit-transform: translateY(-20px);
+
+		transform: translateY(-20px);
+
+		opacity: 0;
+
+	}
+
+}
+
+@keyframes fade-up {
+
+	0% {
+
+		-webkit-transform: translateY(0);
+
+		transform: translateY(0);
+
+		opacity: 1;
+
+	}
+
+	75% {
+
+		-webkit-transform: translateY(-20px);
+
+		transform: translateY(-20px);
+
+		opacity: 0;
+
+	}
+
+}
+
+@-webkit-keyframes fade-down {
+
+	0% {
+
+		-webkit-transform: translateY(0);
+
+		transform: translateY(0);
+
+		opacity: 1;
+
+	}
+
+	75% {
+
+		-webkit-transform: translateY(20px);
+
+		transform: translateY(20px);
+
+		opacity: 0;
+
+	}
+
+}
+
+@keyframes fade-down {
+
+	0% {
+
+		-webkit-transform: translateY(0);
+
+		transform: translateY(0);
+
+		opacity: 1;
+
+	}
+
+	75% {
+
+		-webkit-transform: translateY(20px);
+
+		transform: translateY(20px);
+
+		opacity: 0;
+
+	}
+
+}
+
+@-webkit-keyframes tada {
+
+	from {
+
+		-webkit-transform: scale3d(1, 1, 1);
+
+		transform: scale3d(1, 1, 1);
+
+	}
+
+	10%,
+
+	20% {
+
+		-webkit-transform: scale3d(.95, .95, .95) rotate3d(0, 0, 1, -10deg);
+
+		transform: scale3d(.95, .95, .95) rotate3d(0, 0, 1, -10deg);
+
+	}
+
+	30%,
+
+	50%,
+
+	70%,
+
+	90% {
+
+		-webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);
+
+		transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);
+
+	}
+
+	40%,
+
+	60%,
+
+	80% {
+
+		-webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -10deg);
+
+		transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -10deg);
+
+	}
+
+	to {
+
+		-webkit-transform: scale3d(1, 1, 1);
+
+		transform: scale3d(1, 1, 1);
+
+	}
+
+}
+
+@keyframes tada {
+
+	from {
+
+		-webkit-transform: scale3d(1, 1, 1);
+
+		transform: scale3d(1, 1, 1);
+
+	}
+
+	10%,
+
+	20% {
+
+		-webkit-transform: scale3d(.95, .95, .95) rotate3d(0, 0, 1, -10deg);
+
+		transform: scale3d(.95, .95, .95) rotate3d(0, 0, 1, -10deg);
+
+	}
+
+	30%,
+
+	50%,
+
+	70%,
+
+	90% {
+
+		-webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);
+
+		transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);
+
+	}
+
+	40%,
+
+	60%,
+
+	80% {
+
+		-webkit-transform: rotate3d(0, 0, 1, -10deg);
+
+		transform: rotate3d(0, 0, 1, -10deg);
+
+	}
+
+	to {
+
+		-webkit-transform: scale3d(1, 1, 1);
+
+		transform: scale3d(1, 1, 1);
+
+	}
+
+}
+
+.ng-spin {
+
+	-webkit-animation: spin 2s linear infinite;
+
+	animation: spin 2s linear infinite;
+
+}
+
+.ng-spin-hover:hover {
+
+	-webkit-animation: spin 2s linear infinite;
+
+	animation: spin 2s linear infinite;
+
+}
+
+.ng-tada {
+
+	-webkit-animation: tada 1.5s ease infinite;
+
+	animation: tada 1.5s ease infinite;
+
+}
+
+.ng-tada-hover:hover {
+
+	-webkit-animation: tada 1.5s ease infinite;
+
+	animation: tada 1.5s ease infinite;
+
+}
+
+.ng-flashing {
+
+	-webkit-animation: flashing 1.5s infinite linear;
+
+	animation: flashing 1.5s infinite linear;
+
+}
+
+.ng-flashing-hover:hover {
+
+	-webkit-animation: flashing 1.5s infinite linear;
+
+	animation: flashing 1.5s infinite linear;
+
+}
+
+.ng-burst {
+
+	-webkit-animation: burst 1.5s infinite linear;
+
+	animation: burst 1.5s infinite linear;
+
+}
+
+.ng-burst-hover:hover {
+
+	-webkit-animation: burst 1.5s infinite linear;
+
+	animation: burst 1.5s infinite linear;
+
+}
+
+.ng-fade-up {
+
+	-webkit-animation: fade-up 1.5s infinite linear;
+
+	animation: fade-up 1.5s infinite linear;
+
+}
+
+.ng-fade-up-hover:hover {
+
+	-webkit-animation: fade-up 1.5s infinite linear;
+
+	animation: fade-up 1.5s infinite linear;
+
+}
+
+.ng-fade-down {
+
+	-webkit-animation: fade-down 1.5s infinite linear;
+
+	animation: fade-down 1.5s infinite linear;
+
+}
+
+.ng-fade-down-hover:hover {
+
+	-webkit-animation: fade-down 1.5s infinite linear;
+
+	animation: fade-down 1.5s infinite linear;
+
+}
+
+.ng-fade-left {
+
+	-webkit-animation: fade-left 1.5s infinite linear;
+
+	animation: fade-left 1.5s infinite linear;
+
+}
+
+.ng-fade-left-hover:hover {
+
+	-webkit-animation: fade-left 1.5s infinite linear;
+
+	animation: fade-left 1.5s infinite linear;
+
+}
+
+.ng-fade-right {
+
+	-webkit-animation: fade-right 1.5s infinite linear;
+
+	animation: fade-right 1.5s infinite linear;
+
+}
+
+.ng-fade-right-hover:hover {
+
+	-webkit-animation: fade-right 1.5s infinite linear;
+
+	animation: fade-right 1.5s infinite linear;
+
+}
+
+.ng-xs {
+
+	font-size: 1rem!important;
+
+}
+
+.ng-sm {
+
+	font-size: 1.55rem!important;
+
+}
+
+.ng-md {
+
+	font-size: 2.25rem!important;
+
+}
+
+.ng-fw {
+
+	font-size: 1.2857142857em;
+
+	line-height: .8em;
+
+	width: 1.2857142857em;
+
+	height: .8em;
+
+	margin-top: -.2em!important;
+
+	vertical-align: middle;
+
+}
+
+.ng-lg {
+
+	font-size: 3.0rem!important;
+
+}
+
+.ng-pull-left {
+
+	float: left;
+
+	margin-right: .3em!important;
+
+}
+
+.ng-pull-right {
+
+	float: right;
+
+	margin-left: .3em!important;
+
+}
+
+.ng-rotate-90 {
+
+	transform: rotate(90deg);
+
+	-ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=1)';
+
+}
+
+.ng-rotate-180 {
+
+	transform: rotate(180deg);
+
+	-ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=2)';
+
+}
+
+.ng-rotate-270 {
+
+	transform: rotate(270deg);
+
+	-ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=3)';
+
+}
+
+.ng-flip-horizontal {
+
+	transform: scaleX(-1);
+
+	-ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)';
+
+}
+
+.ng-flip-vertical {
+
+	transform: scaleY(-1);
+
+	-ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)';
+
+}
+
+.ng-border {
+
+	padding: .25em;
+
+	border: .07em solid rgba(0, 0, 0, .1);
+
+	border-radius: .25em;
+
+}
+
+.ng-border-circle {
+
+	padding: .25em;
+
+	border: .07em solid rgba(0, 0, 0, .1);
+
+	border-radius: 50%;
+
+}
+
+.ng-ng-add-icon:before {
+	content: "\e900";
+  }
+  .ng-ng-card-icon:before {
+	content: "\e901";
+  }
+  .ng-ng-card-paylater-icon:before {
+	content: "\e902";
+  }
+  .ng-ng-card-swipe-icon:before {
+	content: "\e903";
+  }
+  .ng-ng-clock-icon:before {
+	content: "\e904";
+  }
+  .ng-ng-customers-add-icon:before {
+	content: "\e905";
+  }
+  .ng-ng-customers-icon:before {
+	content: "\e906";
+  }
+  .ng-ng-customers-search-icon:before {
+	content: "\e907";
+  }
+  .ng-ng-delete-2-icon:before {
+	content: "\e908";
+  }
+  .ng-ng-delete-icon:before {
+	content: "\e909";
+  }
+  .ng-ng-edit-icon:before {
+	content: "\e90a";
+  }
+  .ng-ng-expence-add-icon:before {
+	content: "\e90b";
+  }
+  .ng-ng-expence-icon:before {
+	content: "\e90c";
+  }
+  .ng-ng-home-icon:before {
+	content: "\e90d";
+  }
+  .ng-ng-logout-icon:before {
+	content: "\e90e";
+  }
+  .ng-ng-nego-icon:before {
+	content: "\e90f";
+  }
+  .ng-ng-negobill_icon:before {
+	content: "\e910";
+  }
+  .ng-ng-negobill-full-icon:before {
+	content: "\e911";
+  }
+  .ng-ng-product-add-icon:before {
+	content: "\e912";
+  }
+  .ng-ng-product-icon:before {
+	content: "\e913";
+  }
+  .ng-ng-profile-icon:before {
+	content: "\e914";
+  }
+  .ng-ng-recent-icon:before {
+	content: "\e915";
+  }
+  .ng-ng-remove-icon:before {
+	content: "\e916";
+  }
+  .ng-ng-search-icon:before {
+	content: "\e917";
+  }
+  .ng-ng-stock-add-icon:before {
+	content: "\e918";
+  }
+  .ng-ng-stock-icon:before {
+	content: "\e919";
+  }
+  
