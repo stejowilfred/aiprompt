@@ -17,6 +17,9 @@ app.use((req, res, next) => {
     next();
   });
 
+  app.get('/',(req,res)=>{
+    res.json("Hellow world!")
+  })
   app.use('/v1/promt',PromtRoute); 
 
   app.listen(process.env.PORT, () => {
