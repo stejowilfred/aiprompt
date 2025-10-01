@@ -625,7 +625,7 @@ form select.error:focus {
 .row.row-group > div:last-child {
   border-right: none;
 }
-.cursor-poInter {
+.pointer {
   cursor: poInter;
 }
 .dash-wrapper {

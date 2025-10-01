@@ -15,12 +15,14 @@ import Boys from "./components/pages/Boys";
 import Girls from "./components/pages/Girls";
 import Couples from "./components/pages/Couples";
 import Childrens from "./components/pages/Childrens";
-
+import { AlertProvider } from "./components/context/AlertContext";
 
 function App() {
   return (
     <Router>
-              <MainContent />
+      <AlertProvider>
+        <MainContent />
+      </AlertProvider>
     </Router>
   );
 }
@@ -49,28 +51,22 @@ function MainContent() {
     setSideMenuOpen(!isSideMenuOpen);
   };
 
-
   return (
     <>
-     
-        <>
-          <Header toggleSideMenu={toggleSideMenu} />
-          {isSideMenuOpen && <SideBar toggleSideMenu={toggleSideMenu} />}
-          <Menu />
+      <>
+        <Header toggleSideMenu={toggleSideMenu} />
+        {isSideMenuOpen && <SideBar toggleSideMenu={toggleSideMenu} />}
+        <Menu />
 
-          <Routes>
-          <Route
-          path="/"
-          element={ <Navigate to="/dashboard" replace />}
-        />
-         <Route path="/dashboard" element={<Dashboard />} />
-         <Route path="/boys" element={<Boys/>} />
-         <Route path="/girls" element={<Girls/>} />
-         <Route path="/couples" element={<Couples />} />
-         <Route path="/childrens" element={<Childrens/>} />
-          </Routes>
-         
-        </>
+        <Routes>
+          <Route path="/" element={<Navigate to="/dashboard" replace />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/boys" element={<Boys />} />
+          <Route path="/girls" element={<Girls />} />
+          <Route path="/couples" element={<Couples />} />
+          <Route path="/childrens" element={<Childrens />} />
+        </Routes>
+      </>
     </>
   );
 }

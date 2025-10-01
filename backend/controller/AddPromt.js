@@ -20,20 +20,29 @@ exports.createPromt = async (req, res) => {
 
 exports.listPromt = async (req, res) => {
   try {
-    const AllPromt = await AddPromt.find({});
+    const promtType = req.query.type;
+    const allPromt = await AddPromt?.find({});
+
+    let filterData = [...allPromt]; // use let since you may reassign
+
+    if (promtType) {
+      filterData = filterData?.filter(item => item?.promtType?.toLowerCase() === promtType?.toLowerCase());
+    }
+
     res.status(200).json({
-      statusCode: 201,
-      message: "List Promt ftech Success",
-      results: AllPromt,
+      statusCode: 200,
+      message: "List Promt fetch success",
+      results: filterData,
     });
   } catch (err) {
     res.status(500).json({
       statusCode: 500,
-      message: "internal server error",
-      message: err.message,
+      message: "Internal server error",
+      error: err.message, // avoid duplicate keys
     });
   }
 };
+
 
 exports.getPromtById = async (req, res) => {
   try {

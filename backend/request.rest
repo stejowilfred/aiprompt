@@ -1,14 +1,14 @@
-GET http://localhost:4000/v1/promt 
+GET http://localhost:4000/v1/promt?type=girls 
 ###
 
 POST http://localhost:4000/v1/promt 
 Content-Type: application/json
 
 {
-    "title":"Boys Model Style",
-    "descrption":"testing api",
+    "title":"Girls Model Style",
+    "descrption":"Girls api",
     "imageUrl":"/image.png",
-    "promtType":"Boys"
+    "promtType":"Girls"
 }
 
 ###
